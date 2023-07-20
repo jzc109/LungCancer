@@ -15,8 +15,11 @@ import shap
 import numpy as np
 from sklearn.ensemble import BaggingClassifier
 
-import os
-os.chdir("D:/pyweb/ML_WEB")
+# GitHub raw CSV文件的URL
+url = 'https://raw.githubusercontent.com/jzc109/LungCancer/main/pages/lung.csv'
+
+# 从URL读取CSV数据
+#  df = pd.read_csv(url)
 
 # 导入数据
 
@@ -24,7 +27,7 @@ os.chdir("D:/pyweb/ML_WEB")
 def load_data(path):
     df = pd.read_csv(path)
     return df
-df = load_data("lung.csv")
+df = load_data(url)
 
 
 # 数据分割
