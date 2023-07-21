@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+from sklearn.externals import joblib
 import pickle
 from sklearn.model_selection import train_test_split, learning_curve,GridSearchCV, StratifiedKFold,RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
