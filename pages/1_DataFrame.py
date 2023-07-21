@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from sklearn.externals import joblib
-import pickle
+import joblib
+
 from sklearn.model_selection import train_test_split, learning_curve,GridSearchCV, StratifiedKFold,RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import StackingClassifier
@@ -11,7 +11,7 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from scipy.stats import randint as sp_randint
-import shap
+# import shap
 import numpy as np
 from sklearn.ensemble import BaggingClassifier
 
