@@ -5,4 +5,3 @@ matplotlib
 pandas
 streamlit
 joblib
-sklearn
