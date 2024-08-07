@@ -208,7 +208,7 @@ with placeholder5.container():
 # 这里是查看SHAP和LIME图像的
 
 # matplotlib.use('Agg')
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 placeholder6 = st.empty()
 
 # 使用 shap.sample 函数来将数据汇总为 K 个样本
