@@ -152,7 +152,7 @@ shapdatadf =data[['sex', 'age', 'RightUp', 'RightDown', 'maxlength', 'CEA', 'CYF
 # shapvaluedf =pd.read_excel(r'https://github.com/jzc109/LungCancer/blob/main/shap_values.xlsx')
 # shapvaluedf = pd.read_excel('https://raw.githubusercontent.com/jzc109/LungCancer/main/shap_values.xlsx')
 
-pathshap='https://raw.githubusercontent.com/jzc109/LungCancer/main/dat20240527.csv'
+pathshap='https://raw.githubusercontent.com/jzc109/LungCancer/main/shap_values.csv'
 
 @st.cache_data
 def load_data(path):
