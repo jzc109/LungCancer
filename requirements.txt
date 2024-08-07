@@ -6,3 +6,4 @@ pandas
 streamlit
 joblib
 plotly
+shap
