@@ -149,7 +149,7 @@ shapdatadf =data[['sex', 'age', 'RightUp', 'RightDown', 'maxlength', 'CEA', 'CYF
               'SCC', 'NSE', 'ProGRP', 'SmoothMargin', 'Halo', 'IrregularMargin',
               'Lobulation', 'SpinousProtuberant', 'SpiculatedMargin', 'PleuralRetraction',
               'VascularConvergence', 'BubbleLucencies', 'MultNodular', 'PolygonalShape']]
-shapvaluedf =pd.read_excel(r'shap_values.xlsx')
+shapvaluedf =pd.read_excel(r'https://github.com/jzc109/LungCancer/blob/main/shap_values.xlsx')
 # 这里是查看SHAP值
 
 st.subheader('Make predictions in real time')
