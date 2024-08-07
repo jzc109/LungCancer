@@ -150,7 +150,15 @@ shapdatadf =data[['sex', 'age', 'RightUp', 'RightDown', 'maxlength', 'CEA', 'CYF
               'Lobulation', 'SpinousProtuberant', 'SpiculatedMargin', 'PleuralRetraction',
               'VascularConvergence', 'BubbleLucencies', 'MultNodular', 'PolygonalShape']]
 # shapvaluedf =pd.read_excel(r'https://github.com/jzc109/LungCancer/blob/main/shap_values.xlsx')
-shapvaluedf = pd.read_excel('https://raw.githubusercontent.com/jzc109/LungCancer/main/shap_values.xlsx')
+# shapvaluedf = pd.read_excel('https://raw.githubusercontent.com/jzc109/LungCancer/main/shap_values.xlsx')
+
+pathshap='https://raw.githubusercontent.com/jzc109/LungCancer/main/dat20240527.csv'
+
+@st.cache_data
+def load_data(path):
+    data = pd.read_csv(path)
+    return data
+shapvaluedf = load_data(pathshap)
 # 这里是查看SHAP值
 
 st.subheader('Make predictions in real time')
