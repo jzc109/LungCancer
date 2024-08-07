@@ -15,7 +15,7 @@ st.set_page_config(
     layout = 'wide'
 )
 
-path='https://raw.githubusercontent.com/jzc109/LungCancer/main/dat20240527.csv'
+path='https://raw.githubusercontent.com/jzc109/LungCancer/main/dat202407.csv'
 
 @st.cache_data
 def load_data(path):
