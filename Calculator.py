@@ -136,13 +136,13 @@ def user_input_features():
 outputdf = user_input_features()
 
 st.subheader('About the model')
-st.write('The group of patients with lung nodules undergoing evaluation by surgeons is classified as a high-risk population for lung cancer, with a lung cancer incidence rate of 72.4%, and is specifically known as the thoracic surgery clinic cohort.'
-         'Solid nodules that are newly detected in follow-up CT scans have a higher likelihood of being lung cancer compared to baseline nodules.'
-         'Using laboratory measurements and imaging features, we developed a clinical prediction model to aid the diagnosis. This model used the Surper Learner to discriminate whether a nodule is benign or malignant.'
-         'This model has a relatively high performace, AUC of ROC is 0.84 with 95% CI (0.74, 0.94). ' )
+st.write('Can machine learning algorithms integrate radiological features to accurately predict malignancy in solid pulmonary nodules before surgery, with potential to reduce unnecessary procedures while maintaining high sensitivity?'
+         'Using the 21 selected features, including tumor markers and CT characteristics, we established integrated models that based on Random Forest model and Stacking model.'
+         'Random Forest and Stacking models achieved an AUC of 0.836. The Stacking model, with a malignancy threshold of 0.40, had a sensitivity of 95% and specificity of 42%. The key features influencing malignancy included nodule margin, vascular convergence, tumor length, CEA levels, age, multinodularity, and lobulation.'
+          )
 
 st.subheader('Guidelines of the Calculator ')
-st.write('The calculator consists of 3 main sections.The left sidebar of the first section allows users to input relevant parameters and select model variables. The second displays the predicted probability of malignancy of the nodule. The third provides detailed model information, including global and local interpretations using SHAP providing insight into prediction generation. We hope this guide helps you effectively utilize our prediction calculator.')
+st.write('The calculator consists of3 main sections. The left sidebar of the first section allows users to input relevant parameters and select model variables. The second section displays the predicted probability of malignancy of the nodule. The third section provides detailed model information, including global and local interpretations using SHAP, offering insights into prediction generation. Moreover, we provide typical CT features that illustrate the characteristics associated with malignancy, . We hope this guide helps you effectively utilize our prediction calculator.')
 
 image4 = Image.open('shap.png')
 shapdatadf =data[['sex', 'age', 'RightUp', 'RightDown', 'maxlength', 'CEA', 'CYFRA21_1',
