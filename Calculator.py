@@ -234,11 +234,18 @@ shap_values = explainer.shap_values(outputdf)
 #shap_values = explainer.shap_values(outputdf)
 
 shap_values_reshaped = np.reshape(shap_values[0, :], (21, 2))
+# 创建一个 Matplotlib 图形对象  
+fig, ax = plt.subplots(figsize=(10, 6))  # 指定图形大小，视需要而定  
 
+# 使用 shap.force_plot 绘制图形，但不直接显示  
+shap.initjs()  # 初始化 JavaScript  
 shap.force_plot(explainer.expected_value[1], shap_values[0, : ,1], outputdf.iloc[0,:], show=False, matplotlib=True)
 
-st.pyplot(bbox_inches='tight')
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# 确保 Matplotlib 正确排版  
+plt.tight_layout()  
+
+# 然后将图形传递给 Streamlit  
+st.pyplot(fig)  # 避免弃用警告，传递图形对象  
 
 st.write('The SHAP force plot can be used to visualise the SHAP value for each feature as a force that can increase (positive) or decrease (negative) the prediction relative to its baseline for the interpretation of individual patient outcome predictions.')
 
