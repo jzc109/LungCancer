@@ -173,7 +173,7 @@ outputdf = pd.DataFrame([outputdf], columns= shapdatadf.columns)
 
 # stack = joblib.load("stack.pkl")
 with open("stack.pkl", "rb") as file:
-    stack = load(file)
+    stack = pickle.load(file)
 
 # print('stack是个啥：', rf)
 p1 = stack.predict(outputdf)[0]
@@ -181,7 +181,7 @@ p2 = stack.predict_proba(outputdf)
 p2 = round(p2[0][1], 4)
 
 with open("rf.pkl", "rb") as file:
-    rf = load(file)
+    rf = pickle.load(file)
 
 p11 = rf.predict(outputdf)[0]
 p21 = rf.predict_proba(outputdf)
