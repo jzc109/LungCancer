@@ -2,7 +2,7 @@ scipy
 scikit-learn==1.4.2
 matplotlib
 pandas==2.0.3
-numpy==1.23.0
+numpy==1.26.4
 streamlit
 joblib
 plotly
