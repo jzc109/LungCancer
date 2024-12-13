@@ -1,8 +1,8 @@
-numpy
 scipy
 scikit-learn==1.2.2
 matplotlib
-pandas
+pandas==2.1.0
+numpy==1.23.5
 streamlit
 joblib
 plotly
