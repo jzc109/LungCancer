@@ -238,6 +238,7 @@ shap_values_reshaped = np.reshape(shap_values[0, :], (21, 2))
 shap.force_plot(explainer.expected_value[1], shap_values[0, : ,1], outputdf.iloc[0,:], show=False, matplotlib=True)
 
 st.pyplot(bbox_inches='tight')
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.write('The SHAP force plot can be used to visualise the SHAP value for each feature as a force that can increase (positive) or decrease (negative) the prediction relative to its baseline for the interpretation of individual patient outcome predictions.')
 
