@@ -1,5 +1,5 @@
 scipy
-scikit-learn==1.2.2
+scikit-learn
 matplotlib
 pandas==2.1.0
 numpy==1.23.5
