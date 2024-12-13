@@ -239,7 +239,7 @@ fig, ax = plt.subplots(figsize=(10, 6))  # 指定图形大小，视需要而定
 
 # 使用 shap.force_plot 绘制图形，但不直接显示  
 
-shap.force_plot(explainer.expected_value[1], shap_values[0, : ,1], outputdf.iloc[0,:], show=False, matplotlib=True)
+shap.force_plot(explainer.expected_value[1], shap_values[0, : ,1], outputdf.iloc[0,:],  matplotlib=True)
 
 # 确保 Matplotlib 正确排版  
 plt.tight_layout()  
