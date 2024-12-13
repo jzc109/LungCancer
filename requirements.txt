@@ -1,7 +1,7 @@
 scipy
 scikit-learn
 matplotlib
-pandas
+pandas==2.1.0
 numpy
 streamlit
 joblib
